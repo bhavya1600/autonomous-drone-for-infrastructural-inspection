@@ -1,0 +1,18 @@
+#TRAIN
+# python segment\\train.py --data data\\crack-1\\data.yaml --cfg models\\segment\\yolov7-seg.yaml --hyp data\\hyps\\hyp.scratch-high.yaml --weights yolov7-seg.pt --epochs 30 --batch 4 --img 640 --name yolov7-seg --device 0
+
+#PREDICT
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source data\\crack-1\\test\\images\\2555.rf.8ce6a08bbea2d1ea1693f796bd43e9a3.jpg
+#python segment/predict.py --weights runs/train-seg/yolov7-seg12/weights/best.pt --source data/crack-1/test/images/2555.rf.8ce6a08bbea2d1ea1693f796bd43e9a3.jpg
+
+#PREDICT VIDEO
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source data\\crack-1\\Videos\\crack-vid.mp4
+#python segment/predict.py --weights runs/train-seg/yolov7-seg12/weights/best.pt --source VID_20221202_125030.mp4
+
+#PREDICT WEBCAM
+
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source 0
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source "http://192.168.137.214:8080/?action=stream"
+# python segment/predict.py --weights runs/train-seg/yolov7-seg12/weights/best.pt --source "http://192.168.137.214:8080/?action=stream"
+
+#python /F:/Projects/YoloV7_Crack/yolov7-segmentation/segment/train.py — data /F:/Projects/YoloV7_Crack/yolov7-segmentation/data/crack-1/data.yaml — batch 16 — weights /F:/Projects/YoloV7_Crack/yolov7-segmentation/yolov7-seg.pt — cfg /F:/Projects/YoloV7_Crack/yolov7-segmentation/models/segment/yolov7-seg.yaml — epochs 30 — name yolov7-seg — img 640 — hyp /F:/Projects/YoloV7_Crack/yolov7-segmentation/data/hyps/hyp.scratch-high.yaml

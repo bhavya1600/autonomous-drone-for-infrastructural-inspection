@@ -1,0 +1,63 @@
+# Base ----------------------------------------
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.1
+Pillow>=7.1.2
+PyYAML>=5.3.1
+requests>=2.23.0
+scipy>=1.4.1
+torch>=1.7.0
+torchvision>=0.8.1
+tqdm>=4.64.0
+protobuf<=3.21.6
+
+# Logging -------------------------------------
+tensorboard>=2.4.1
+# wandb
+# clearml
+
+# Plotting ------------------------------------
+pandas>=1.1.4
+seaborn>=0.11.0
+
+#Tracking .....................................
+filterpy
+scikit-image
+
+# Export --------------------------------------
+# coremltools>=5.2  # CoreML export
+# onnx>=1.9.0  # ONNX export
+# onnx-simplifier>=0.4.1  # ONNX simplifier
+# nvidia-pyindex  # TensorRT export
+# nvidia-tensorrt  # TensorRT export
+# scikit-learn==0.19.2  # CoreML quantization
+# tensorflow>=2.4.1  # TFLite export (or tensorflow-cpu, tensorflow-aarch64)
+# tensorflowjs>=3.9.0  # TF.js export
+# openvino-dev  # OpenVINO export
+
+# Extras --------------------------------------
+ipython  # interactive notebook
+psutil  # system utilization
+thop>=0.1.1  # FLOPs computation
+# albumentations>=1.0.3
+# pycocotools>=2.0  # COCO mAP
+# roboflow
+
+#TRAIN
+# python segment\\train.py --data data\\crack-1\\data.yaml --cfg models\\segment\\yolov7-seg.yaml --hyp data\\hyps\\hyp.scratch-high.yaml --weights yolov7-seg.pt --epochs 30 --batch 4 --img 640 --name yolov7-seg --device 0
+
+#PREDICT
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source data\\crack-1\\test\\images\\2555.rf.8ce6a08bbea2d1ea1693f796bd43e9a3.jpg
+#python segment/predict.py --weights runs/train-seg/yolov7-seg12/weights/best.pt --source data/crack-1/test/images/2555.rf.8ce6a08bbea2d1ea1693f796bd43e9a3.jpg
+
+#PREDICT VIDEO
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source data\\crack-1\\Videos\\crack-vid.mp4
+#python segment/predict.py --weights runs/train-seg/yolov7-seg12/weights/best.pt --source VID_20221202_125030.mp4
+
+#PREDICT WEBCAM
+
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source 0
+# python segment\\predict.py --weights runs\\train-seg\\yolov7-seg12\\weights\\best.pt --source "http://192.168.137.214:8080/?action=stream"
+# python segment/predict.py --weights runs/train-seg/yolov7-seg12/weights/best.pt --source "http://192.168.137.214:8080/?action=stream"
+
+#python /F:/Projects/YoloV7_Crack/yolov7-segmentation/segment/train.py — data /F:/Projects/YoloV7_Crack/yolov7-segmentation/data/crack-1/data.yaml — batch 16 — weights /F:/Projects/YoloV7_Crack/yolov7-segmentation/yolov7-seg.pt — cfg /F:/Projects/YoloV7_Crack/yolov7-segmentation/models/segment/yolov7-seg.yaml — epochs 30 — name yolov7-seg — img 640 — hyp /F:/Projects/YoloV7_Crack/yolov7-segmentation/data/hyps/hyp.scratch-high.yaml
